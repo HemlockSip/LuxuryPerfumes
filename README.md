@@ -20,7 +20,7 @@ Custom Lightning Web Component displaying critical case information in three vis
 - Case Status
 - Escalation Status
 
-![Component Preview](component-preview.png) <!-- Note: Add actual screenshot -->
+![Component Preview](![image](https://github.com/user-attachments/assets/e90eb072-6025-4950-8b17-17d9fb227e03)) <!-- Note: Add actual screenshot -->
 
 ## Technical Documentation
 
