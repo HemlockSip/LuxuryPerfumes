@@ -1,0 +1,51 @@
+<!-- consentManagement.html -->
+<template>
+    <div class="consent-container">
+        <div class="header">
+            <h2>Privacy Preferences</h2>
+            <p>Manage your consent preferences for a personalized experience</p>
+        </div>
+
+        <div class="consent-form">
+            <template if:true={isLoading}>
+                <div class="spinner-container">
+                    <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+                </div>
+            </template>
+
+            <template if:false={isLoading}>
+                <div class="consent-section">
+                    <div class="consent-option">
+                        <lightning-input 
+                            type="checkbox"
+                            label="Marketing Communications"
+                            name="Marketing_Consent__c"
+                            checked={marketingConsent}
+                            onchange={handleConsentChange}
+                        ></lightning-input>
+                        <p class="consent-description">
+                            Receive updates about new fragrances, exclusive offers, and events
+                        </p>
+                    </div>
+
+                    <div class="consent-option">
+                        <lightning-input 
+                            type="checkbox"
+                            label="Profiling Consent"
+                            name="Profiling_Consent__c"
+                            checked={profilingConsent}
+                            onchange={handleConsentChange}
+                        ></lightning-input>
+                        <p class="consent-description">
+                            Allow us to personalize your experience based on your preferences and interactions
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <p class="last-updated">Last updated: {formattedLastUpdate}</p>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

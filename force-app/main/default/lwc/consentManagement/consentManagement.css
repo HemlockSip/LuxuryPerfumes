@@ -1,0 +1,81 @@
+/* consentManagement.css */
+.consent-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #faf7f2;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #cb2026;
+    padding-bottom: 1rem;
+}
+
+.header h2 {
+    color: #cb2026;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    color: #666;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.consent-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.consent-option {
+    margin-bottom: 1.5rem;
+}
+
+.consent-description {
+    color: #666;
+    font-size: 0.875rem;
+    margin-left: 1.75rem;
+    margin-top: 0.25rem;
+}
+
+.footer {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* Custom checkbox styling */
+:host {
+    --slds-c-checkbox-color-background: white;
+    --slds-c-checkbox-color-border: #cb2026;
+    --slds-c-checkbox-color-border-checked: #cb2026;
+    --slds-c-checkbox-mark-color-foreground: #cb2026;
+}
+
+.spinner-container {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .consent-container {
+        padding: 1rem;
+    }
+
+    .header h2 {
+        font-size: 1.5rem;
+    }
+
+    .consent-section {
+        padding: 1rem;
+    }
+}
