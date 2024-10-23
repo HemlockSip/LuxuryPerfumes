@@ -1,0 +1,56 @@
+<!-- caseStatusBlocks.html -->
+<template>
+    <div class="slds-grid slds-gutters slds-wrap">
+        <template if:true={isLoading}>
+            <div class="slds-col slds-size_1-of-1">
+                <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+            </div>
+        </template>
+        
+        <template if:false={isLoading}>
+            <!-- Days Open Block -->
+            <div class="slds-col slds-size_1-of-3">
+                <div class={daysOpenClass}>
+                    <div class="slds-text-heading_large slds-text-align_center">
+                        {daysOpen}
+                    </div>
+                    <div class="slds-text-body_small slds-text-align_center">
+                        {daysOpenLabel}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Block -->
+            <div class="slds-col slds-size_1-of-3">
+                <div class={statusClass}>
+                    <div class="slds-text-heading_large slds-text-align_center">
+                        <lightning-icon
+                            icon-name="utility:case"
+                            size="small"
+                            class="slds-m-right_x-small">
+                        </lightning-icon>
+                    </div>
+                    <div class="slds-text-body_small slds-text-align_center">
+                        {caseStatus}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Escalation Block -->
+            <div class="slds-col slds-size_1-of-3">
+                <div class={escalatedClass}>
+                    <div class="slds-text-heading_large slds-text-align_center">
+                        <lightning-icon
+                            icon-name={escalatedIcon}
+                            size="small"
+                            class="slds-m-right_x-small">
+                        </lightning-icon>
+                    </div>
+                    <div class="slds-text-body_small slds-text-align_center">
+                        {escalatedText}
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>
